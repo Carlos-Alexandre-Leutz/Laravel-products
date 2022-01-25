@@ -1,3 +1,31 @@
+Cria um novo controler     -> php artisan make:controller nomeDOControllerControler
+
+Cria uma nova migratio     -> php artisan make:migration nome_da_migration_table (create_nome da migration adiciona uma de criação)
+
+Mostar Status da migration -> php artisan migrate:status
+
+Roda as migration          -> php artisan migrate
+
+Rollback as migration      -> php artisan migrate:rollback
+
+Atualiza as migration      -> php artisan migrate:fresh (mas apaga os dados do banco)
+
+Refrech mas migrations     -> php artisan migration:refrech (faz o Rollback e a migração automaticamente)
+
+Reseta todas as migrations -> php artisan migrate:resete
+
+Status das migration       -> php artisan migrate:status
+
+Criar uma nova migration para add campo novos em tabela ja esistemte, no metodo up
+                           ->php artisan make:migration add_categoria_to_products_table 
+                           -> apos roda as migration como mostra na linha 7
+
+Para remover uma coluna de adicionar no metodo donw da migrate o que voce quer remover (usando a função dropColumn )
+                          ->  $table->dropColumn('categoria');
+                          -> apos roda as migration como mostra na linha 9
+
+Para criar um Model       -> php artisan make:model Nome (Primeira letra maiscula e no singular)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

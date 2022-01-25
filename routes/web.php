@@ -39,7 +39,12 @@ Route::get('/testesidnaoobr/{id?}', function ($id = null ) {
     //     //foi trasferido para a controler
     // });
 
-// registrarndo controler
-use App\Http\Controllers\EventController;
+
+use App\Http\Controllers\EventController;// registrarndo controler
 Route::get('/comcontroler', [EventController::class, 'index']);
 Route::get('/events/create/', [EventController::class, 'create']);
+Route::get('/dadosbanco', [EventController::class, 'dadosbanco']);
+
+// rota de post
+
+Route::post('/event', [EventController::class, 'store']);//nome store e convenção pra salvar coisas no banco

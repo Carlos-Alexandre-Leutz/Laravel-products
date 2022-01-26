@@ -44,7 +44,12 @@ use App\Http\Controllers\EventController;// registrarndo controler
 Route::get('/comcontroler', [EventController::class, 'index']);
 Route::get('/events/create/', [EventController::class, 'create']);
 Route::get('/dadosbanco', [EventController::class, 'dadosbanco']);
+Route::get('/img', [EventController::class, 'viewImg']);
+Route::get('/img', [EventController::class, 'viewImg']);
 
 // rota de post
-
 Route::post('/event', [EventController::class, 'store']);//nome store e convenção pra salvar coisas no banco
+Route::post('/event/img', [EventController::class, 'img']);//nome store e convenção pra salvar coisas no banco
+
+
+Route::get('/tesete', [EventController::class, 'teste']);
